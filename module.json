@@ -1,0 +1,56 @@
+{
+  "name": "story-forge",
+  "version": "0.1.0",
+  "description": "Autonomous visual-story production engine: creative direction through validated final story (Phase 1 scope).",
+  "stages": [
+    {
+      "id": "context-analyzer",
+      "command": "/context-analyzer",
+      "reads": ["project.json"],
+      "writes": ["context/input-analysis.json"],
+      "schema": "input-analysis.schema.json"
+    },
+    {
+      "id": "creative-direction",
+      "command": "/creative-direction",
+      "reads": ["project.json", "context/input-analysis.json"],
+      "writes": ["context/creative-direction.json"],
+      "schema": "creative-direction.schema.json"
+    },
+    {
+      "id": "concepts",
+      "command": "/concepts",
+      "reads": ["context/creative-direction.json"],
+      "writes": ["story/concepts.json"],
+      "schema": "concepts.schema.json"
+    },
+    {
+      "id": "select-concept",
+      "command": "/select-concept",
+      "reads": ["context/creative-direction.json", "story/concepts.json"],
+      "writes": ["story/selected-concept.json"],
+      "schema": "selected-concept.schema.json"
+    },
+    {
+      "id": "story-draft",
+      "command": "/story-draft",
+      "reads": ["context/creative-direction.json", "story/selected-concept.json", "story/concepts.json"],
+      "writes": ["story/draft.json"],
+      "schema": "story-draft.schema.json"
+    },
+    {
+      "id": "story-critic",
+      "command": "/story-critic",
+      "reads": ["context/creative-direction.json", "story/draft.json"],
+      "writes": ["story/critique.json"],
+      "schema": "critique.schema.json"
+    },
+    {
+      "id": "story-rewrite",
+      "command": "/story-rewrite",
+      "reads": ["context/creative-direction.json", "story/draft.json", "story/critique.json"],
+      "writes": ["story/draft.json"],
+      "schema": "story-draft.schema.json"
+    }
+  ]
+}
