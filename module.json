@@ -51,6 +51,101 @@
       "reads": ["context/creative-direction.json", "story/draft.json", "story/critique.json"],
       "writes": ["story/draft.json"],
       "schema": "story-draft.schema.json"
+    },
+    {
+      "id": "entity-bibles",
+      "command": "/entity-bibles",
+      "reads": ["story/final.json", "context/creative-direction.json"],
+      "writes": [
+        "context/character-bible.json",
+        "context/animal-bible.json",
+        "context/object-bible.json",
+        "context/location-bible.json"
+      ],
+      "schema": "character-bible.schema.json",
+      "schemas": [
+        "character-bible.schema.json",
+        "animal-bible.schema.json",
+        "object-bible.schema.json",
+        "location-bible.schema.json"
+      ]
+    },
+    {
+      "id": "visual-bible",
+      "command": "/visual-bible",
+      "reads": [
+        "story/final.json",
+        "context/style-preset.json",
+        "context/character-bible.json",
+        "context/object-bible.json",
+        "context/location-bible.json"
+      ],
+      "writes": ["context/visual-bible.json"],
+      "schema": "visual-bible.schema.json"
+    },
+    {
+      "id": "scene-planning",
+      "command": "/scene-planning",
+      "reads": [
+        "story/final.json",
+        "context/creative-direction.json",
+        "context/character-bible.json",
+        "context/animal-bible.json",
+        "context/object-bible.json",
+        "context/location-bible.json",
+        "context/visual-bible.json"
+      ],
+      "writes": ["scenes/scene-*.json", "context/continuity-state.json"],
+      "schema": "scene.schema.json",
+      "schemas": ["scene.schema.json", "continuity-state.schema.json"]
+    },
+    {
+      "id": "scene-critic",
+      "command": "/scene-critic",
+      "reads": [
+        "scenes/scene-*.json",
+        "context/creative-direction.json",
+        "context/character-bible.json",
+        "context/animal-bible.json",
+        "context/object-bible.json",
+        "context/location-bible.json",
+        "context/visual-bible.json",
+        "context/continuity-state.json",
+        "story/final.json"
+      ],
+      "writes": ["reports/scene-critique.json"],
+      "schema": "scene-critique.schema.json"
+    },
+    {
+      "id": "scene-fix",
+      "command": "/scene-fix",
+      "reads": [
+        "reports/scene-critique.json",
+        "scenes/scene-*.json",
+        "context/continuity-state.json",
+        "context/character-bible.json",
+        "context/animal-bible.json",
+        "context/object-bible.json",
+        "context/location-bible.json",
+        "context/visual-bible.json"
+      ],
+      "writes": ["scenes/scene-*.json", "context/continuity-state.json"],
+      "schema": "scene.schema.json",
+      "schemas": ["scene.schema.json", "continuity-state.schema.json"]
+    },
+    {
+      "id": "image-prompts",
+      "command": "/image-prompts",
+      "reads": [
+        "scenes/scene-*.json",
+        "context/visual-bible.json",
+        "context/character-bible.json",
+        "context/animal-bible.json",
+        "context/object-bible.json",
+        "context/location-bible.json"
+      ],
+      "writes": ["prompts/prompt-*.json"],
+      "schema": "image-prompt.schema.json"
     }
   ]
 }

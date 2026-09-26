@@ -54,7 +54,23 @@ yourself." "Everything happens for a reason." The ending's meaning must be
 silence, absence, visual symbolism, repetition, environmental change, objects,
 composition, facial expression, animal behaviour.
 
-## Stages (Phase 1)
+**Continuity is a hard requirement.** Scenes are frames of one continuous
+film. The bibles (character/animal/object/location/visual) are persistent
+project state: define an attribute once, then reuse it verbatim — never
+reinvent age, face, hair, clothing, markings, object condition, architecture,
+weather, season, light or style per scene. Scenes reference bible entries by
+id; image prompts embed the bible descriptors word-for-word, because repeated
+identical wording is the only continuity mechanism an image model has.
+
+**Captions are part of the storytelling system**, generated with scene
+planning, in one consistent voice: concise, non-redundant with the visual,
+contributing emotional or narrative information. Scenes that speak for
+themselves get an empty caption.
+
+**The visual style is configurable, never hard-coded** — it comes from the
+project's `context/style-preset.json`, applied via the visual bible.
+
+## Stages
 
 | Command | Reads | Writes |
 | --- | --- | --- |
@@ -65,6 +81,12 @@ composition, facial expression, animal behaviour.
 | `/story-draft` | creative-direction, selected-concept | story/draft.json |
 | `/story-critic` | creative-direction, draft | story/critique.json |
 | `/story-rewrite` | creative-direction, draft, critique | story/draft.json (version+1) |
+| `/entity-bibles` | final, creative-direction | context/{character,animal,object,location}-bible.json |
+| `/visual-bible` | final, style-preset, entity bibles | context/visual-bible.json |
+| `/scene-planning` | final, direction, all bibles | scenes/scene-*.json, context/continuity-state.json |
+| `/scene-critic` | scenes, bibles, continuity | reports/scene-critique.json |
+| `/scene-fix` | critique, failed scenes, bibles | scenes/scene-*.json (failed only), continuity-state |
+| `/image-prompts` | scenes, all bibles | prompts/prompt-*.json |
 
-Later phases add: bibles (character/animal/object/location/visual), scene
-planning, captions, image prompts. Do not produce those yet.
+Story Forge ends at image prompts. Image generation belongs to image-forge —
+never generate or fetch images.
