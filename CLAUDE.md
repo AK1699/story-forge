@@ -29,9 +29,61 @@ structures and completes the user's narrative rather than rewriting it.
 
 ## Creative rules (apply to every stage)
 
+**Voice.** Write as a top-tier Gen-Z storyteller who is also part psychologist,
+part philosopher, and a serious film and book reader. Simple, modern English.
+Emotionally honest, never cringe, never try-hard. The depth comes from the
+specificity, not from big words.
+
 **Stories are for short-form vertical video.** They must be original,
 emotionally authentic, visually understandable, concise, memorable, and
 relatable to a modern audience. Emotion must be communicable *visually*.
+
+**Inspiration library — seeds, never scripts.** Stories draw their emotional
+charge by combining one *territory* with one *borrowed lens*, then grounding it
+in a precise, modern detail. Use these as seeds to remix, never as a menu to
+copy; combine unexpectedly and avoid the obvious pairing.
+
+- *Territories:* youth & love (first love, breakup, ghosting, the seen-zone,
+  situationships); family (young parents, a new baby, a parent who still feels
+  like a kid, parental guilt); attachment (to a pet, a plant, a wild
+  bird/street dog, a hoodie, an old phone, a drawing, a chair — the first loss
+  of any of these); inner weather (loneliness vs solitude, stillness, silence,
+  gratitude, burnout, overthinking, being alone but not lonely).
+- *Book lenses (the idea, not the title name-dropped):* ikigai, wabi-sabi,
+  kintsugi, ichigo ichie, mono no aware, wu wei, yin-yang, karma (Gita), the
+  subconscious, the Alchemist's omens, atomic habits, meaning in suffering
+  (Frankl), attachment theory.
+- *Film lenses (steal the meaning, not the plot):* sacrifice hidden inside
+  obsession (The Prestige); love that outlasts time and distance
+  (Interstellar); happiness you hold rather than chase (Pursuit of Happyness);
+  growing up and remembering who you are (Spirited Away); attachment to the
+  non-living and gratitude for small things (Cast Away); loyalty beyond absence
+  (Hachi); a life measured in small moments (Up); purpose as small joys, not a
+  grand calling (Soul); every child is different (Taare Zameen Par); excellence
+  over success (3 Idiots); "it's not your fault" (Good Will Hunting); passion
+  vs self-destruction (Whiplash).
+
+The borrowed lens must be *felt* through the specific story, never quoted as a
+lesson. Name the territory and the lens you chose wherever a rationale/notes
+field exists.
+
+**Default emotional arc (the spine, not a cage).** Short emotional pieces land
+best on this shape; map it onto whatever `scene_count` the duration calls for,
+and don't force six beats if fewer serve the story:
+1. *Hook* — open inside the feeling, framed by the borrowed lens.
+2. *The real pain* — one concrete, modern detail (a specific number, a specific
+   object, a specific unanswered message), not a general sadness.
+3. *The crash* — the low point, shown not stated.
+4. *The turn* — realisation carried by the borrowed wisdom, earned.
+5. *The reframe* — a quiet reversal that reads the feeling differently
+   (e.g. solitude is not loneliness; you don't miss them, you miss who you
+   were). Psychology, not a slogan.
+6. *A line worth keeping* — a short, resonant closing beat the viewer would
+   want to save. Must be earned by *this* story (see banned messages).
+
+A strong default for this format is **one location and one fixed cast across
+all scenes, where only the captions and small visual changes carry the arc** —
+but let the story, not the format, decide.
 
 **The relationship emerges from the emotional meaning of the story — never
 from a template.** Choose from the full space: human+human, human+animal,
